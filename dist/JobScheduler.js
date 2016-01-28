@@ -3,7 +3,6 @@ var Utils = require('Utils');
 var Enums = require('Enums');
 var WorkerScheduler = require('WorkerScheduler');
 var BuilderScheduler = require('BuilderScheduler');
-var CourierScheduler = require('CourierScheduler');
 
 var ROLE = Enums.ROLE;
 var TASK = Enums.TASK;
@@ -12,9 +11,7 @@ function scheduleGuard() {}
 
 var SchedulerMap = {
     WORKER: WorkerScheduler.schedule,
-    BUILDER: BuilderScheduler.schedule,
-    GUARD: scheduleGuard,
-    COURIER: CourierScheduler.schedule
+    BUILDER: BuilderScheduler.schedule
 };
 
 
